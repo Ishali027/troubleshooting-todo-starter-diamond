@@ -37,7 +37,7 @@ function renderTasks(taskList) {
           <button class="complete-button">✔️</button>
         </td>
         <td>
-          ${task.todoText}
+          ${task.todo_text}
         </td>
       </tr>
     `)
@@ -53,7 +53,7 @@ function createTask() {
   // to the server:
   $.ajax({
     method: 'POST',
-    url: '/task',
+    url: '/tasks',
     data: { 
       todo_text: newTask,
       is_done: false
